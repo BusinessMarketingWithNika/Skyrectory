@@ -42,3 +42,40 @@ h1 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
+.tool {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align-last: center;
+}
+.tool img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.tool h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.tool p {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.badge-free {
+    background-color: #e7f3ff;
+    color: #1a73e8;
+}
+.badge-paid {
+    background-color: #fce8e6;
+    color: #d93025;
+}
