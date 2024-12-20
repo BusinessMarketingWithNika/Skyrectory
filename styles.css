@@ -48,7 +48,14 @@ h1 {
     border-radius: 8px;
     padding: 20px;
     text-align-last: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.tool:hover {
+    transform: scale (1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 .tool img {
     max-width: 100%;
     height: auto;
@@ -66,10 +73,11 @@ h1 {
 
 .badge {
     display: inline-block;
-    padding: 4px 8px;
+    padding: 4px 12px;
     border-radius: 4px;
     font-size: 12px;
     font-weight: bold;
+    border-radius: 5px;
 }
 .badge-free {
     background-color: #e7f3ff;
