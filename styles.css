@@ -1,16 +1,56 @@
 /* General Styles */
+
+:root {
+    --primary-color: #1DA1F2;
+    --secondary-color: #333333;
+    --background-color: #E1E8ED;
+    --text-color: #333333;
+    --accent-color:#657786;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20 px;
-    background-color: #f4f4f4;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Container for centering the content */
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Scrollable Header */
+.scrollable-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10 px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.scrollable-header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollable-header nav ul li {
+    margin-right: 20px;
+}
+
+.scrollable-header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 h1 {
     text-align: center;
