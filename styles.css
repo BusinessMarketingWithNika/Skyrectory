@@ -8,6 +8,16 @@
     --accent-color:#657786;
 }
 
+/* Link Colours */
+a {
+    text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -52,10 +62,20 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Hero Section*/
+#hero {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
 h1 {
     text-align: center;
     color: #333;
 }
+
 .filters{
     display:flex;
     justify-content: space-between;
