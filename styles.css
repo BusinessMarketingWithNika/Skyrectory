@@ -120,14 +120,14 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     border: 1 px solid var(--accent-color);
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .category-pill {
     background-color: var(--accent-color);
     color: white;
     padding: 5px 15px;
-    border-radius: 20px;
+    border-radius: 50px;
     cursor: pointer;
 }
 
