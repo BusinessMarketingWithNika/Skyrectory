@@ -242,3 +242,42 @@ body {
     background-color: var(--primary-color);
     color: white;
 }
+
+/* Submit Tool Form */
+
+#submit-tool {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#submit-tool h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tool-submission-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#tool-submission-form input,
+#tool-submission-form textarea,
+#tool-submissoion-form select {
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+#tool-submission-form button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
