@@ -281,3 +281,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Sponsorship Tiers */
+
+#sponsorship {
+    margin: 40px 0;
+}
