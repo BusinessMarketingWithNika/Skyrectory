@@ -287,3 +287,42 @@ body {
 #sponsorship {
     margin: 40px 0;
 }
+
+#sponsorship h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sponsorship.tiers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tier {
+    background-color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+}
+
+.tier h3 {
+    color: var(--primary-color);
+}
+
+.tier .price {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.sponsor-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
