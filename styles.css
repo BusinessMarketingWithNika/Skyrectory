@@ -368,3 +368,49 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sponsorship.tiers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tier {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+a, button, [role="button"] {
+    cursor: pointer;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-repeat: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-title-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-title-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #3b82f6, #06b6d4);
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite, gradient-y 15s ease infinite;
+    z-index: -1;
+}
