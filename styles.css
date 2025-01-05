@@ -293,7 +293,7 @@ body {
     margin-bottom: 20px;
 }
 
-.sponsorship.tiers {
+.sponsorship-tiers {
     display: flex;
     justify-content: center;
     gap: 20px;
