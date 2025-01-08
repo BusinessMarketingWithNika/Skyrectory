@@ -9,4 +9,18 @@ document.addEventListener("DOMContentLoaded", ()) => {
     ];
 
     const categories = [ "Analytics", "Schedulers", "Directories", "Chrome Extensions"];
+
+    // DOM Elements
+    const toolDirectory = document.getElementById("tool-directory");
+    const filterButtons = document.querySelector(".filter-btn");
+    const sortSelect = document.getElementById("sort-select");
+    const categoryPills = document.getElementById("category-pills");
+    const searchBar = document.getElementById("search-bar");
+    const paginationContainer = document.getElementById("pagination");
+    const toolSubmissionForm = document.getElementById ("tool-submission-form");
+    const sponsorButtons = document.querySelectorAll ("sponsor-btn");
+
+    // Variables for pagination
+    let currentPage = 1;
+    const toolsPerPage = 12;
 }

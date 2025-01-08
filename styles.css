@@ -125,6 +125,14 @@ body {
     border-radius: 50px;
 }
 
+#category-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
 .category-pill {
     background-color: var(--accent-color);
     color: white;
