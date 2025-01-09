@@ -24,4 +24,24 @@ document.addEventListener("DOMContentLoaded", ()) => {
     // Variables for pagination
     let currentPage = 1;
     const toolsPerPage = 12;
+
+    // Function to render tools
+    function renderTools(toolsToRender) {
+        if(!toolDirectory) return;
+        toolDirectory.innerHTML = "";
+        toolsToRender.forEach(tool => {
+            const toolElement = document.createElement("div");
+            toolElement.className = "tool";
+            toolElement.innerHTML = `
+            <img src="${tool.image}" alt="${tool.name} Logo">
+            <h3>${tool.name}</h3>
+            <p>${tool.description}</p>
+            <span class="badge badge-${tool.type}">${tool.type}</span>
+            <div class="tool-categories">
+                ${tool.categories.map(category => `<span class="category-category-pill">${category}</span>`).join(``)}
+            </div>
+            ;
+            toolDirectory.appendChild(toolElement);
+        });
+    }
 }
