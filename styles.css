@@ -69,7 +69,7 @@ body {
 .scrollable-header {
     background-color: var(--primary-color);
     color: white;
-    padding: 10 px 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -191,7 +191,7 @@ body {
 }
 
 .tool:hover {
-    transform: scale (1.05);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -275,7 +275,7 @@ body {
 
 #tool-submission-form input,
 #tool-submission-form textarea,
-#tool-submissoion-form select {
+#tool-submission-form select {
     padding: 10px;
     border: 1px solid var(--accent-color);
     border-radius: 5px;
