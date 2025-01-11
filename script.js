@@ -43,3 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
             toolDirectory.appendChild(toolElement);
         });
     }
+         // Function to filter and sort tools
+         function filterAndSortTools() {
+            const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter || "all";
+            const sortBy = sortSelect ? sortSelect.value : "newest";
+            const searchTerm = searchBar ? searchBar.value.toLowerCase() : '';
+            const activeCategories = Array.from(document.querySelectorAll(".category-pill.active")).map(pill => pill.textContent);
+
+            let filteredTools = tools.filter(tool => {
+                const matchesFilter = activeFilter === "all" || tool.type === activeFilter;
+                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || tool.description.toLowerCase().includes(searchTerm);
+                const matchCategories = activeCategories.length === 0 || activeCategories.some(category => tool.categories.includes(category));
+                return matchesFilter && matchesSearch && matchesCategories;
+            });
+
+         }
+         }
