@@ -57,5 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 return matchesFilter && matchesSearch && matchesCategories;
             });
 
+            filteredTools.sort((a,b) => {
+                switch (sortBy) {
+                    case "newest":
+                        return new Date(b.date) - new Date(a.date);
+                    case "oldest":
+                        return new Date(a.date) - new Date(b.date);
+                    case "a-z":
+                        return a.name.localeCompare(b.name);
+                    case "z-a":
+                        return b.name.localeCompare(a.name);
+                    default:
+                        return 0;
+                
+                }
+            });
          }
          }
