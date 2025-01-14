@@ -72,5 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 }
             });
+
+            renderPagination(filteredTools);
+            const startIndex = (currentPage - 1) * toolsPerPage;
+            const endIndex = startIndex + toolsPerPage
+            renderTools(filteredTools.slice(startIndex, endIndex));
          }
          }
