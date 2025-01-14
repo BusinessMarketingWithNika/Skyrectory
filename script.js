@@ -58,24 +58,35 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             filteredTools.sort((a,b) => {
+                if (a.featured && !b.featured) return - 1
+                if (!a.featured && b.featured) return 1
+
                 switch (sortBy) {
+                    case "default":
+                        return 0 // No sorting
+
                     case "newest":
-                        return new Date(b.date) - new Date(a.date);
+                        return new Date(b.date).getTime() - new Date(a.date).getTime();
                     case "oldest":
-                        return new Date(a.date) - new Date(b.date);
+                        return new Date(a.date).getTime() - new Date(b.date).getTime();
                     case "a-z":
                         return a.name.localeCompare(b.name);
                     case "z-a":
                         return b.name.localeCompare(a.name);
+                    case "free":
+                        return a.type === "free" ? -1 : 1
+                    case "paid":
+                        return a.type === "paid" ? -1 : 1
                     default:
                         return 0;
                 
                 }
-            });
+            })
+            
+            return filteredTools
 
-            renderPagination(filteredTools);
-            const startIndex = (currentPage - 1) * toolsPerPage;
-            const endIndex = startIndex + toolsPerPage
-            renderTools(filteredTools.slice(startIndex, endIndex));
+        }
+
+       //
          }
-         }
+        )
