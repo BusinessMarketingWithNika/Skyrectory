@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { FloatingHeader } from "@/components/FloatingHeader"
 import { Footer } from "@/components/Footer"
 import { ToolBadge} from "@/components/ui/tool-badge"
-import { AnimatedTitleBackgroud } from "@/components/AnimatedTitleBackground"
+import { AnimatedTitleBackground } from "@/components/AnimatedTitleBackground"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
