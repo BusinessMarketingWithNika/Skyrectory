@@ -70,6 +70,5 @@ const categories = ["Analytics", "Schedulers", "Directories", "Chrome Extensions
 
         }
 
-       //
          }
         )
