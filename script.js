@@ -32,6 +32,17 @@ const tools = [
 
 const categories = ["Analytics", "Schedulers", "Directories", "Chrome Extensions"]
 
+export default function SkyRectory() {
+    const [currentPage, setCurrentPage] = useState(1)
+    const [activeFilter, setActiveFilter] = useState("all")
+    const [sortyBy, setSortBy] = useState<string>("default") // Updated initial state
+    const [searchTerm, setSearchTerm] = useState ("")
+    const [activeCategories, setActiveCategories] = useState<string[]>([])
+    const [isAllSelected, setIsAllSelected] = useState(true)
+
+    const toolsPerPage = 12
+}
+
 
             let filteredTools = tools.filter(tool => {
                 const matchesFilter = activeFilter === "all" || tool.type === activeFilter;
