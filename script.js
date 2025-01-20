@@ -46,10 +46,10 @@ export default function SkyRectory() {
             const filterAndSortTools = () => {
             let filteredTools = tools.filter(tool => {
                 const matchesFilter = activeFilter === "all" || tool.type === activeFilter;
-                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || tool.description.toLowerCase().includes(searchTerm);
-                const matchesCategories = activeCategories.length === 0 || activeCategories.some(category => tool.categories.includes(category));
+                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || tool.description.toLowerCase().includes(searchTerm.toLowerCase());
+                const matchesCategories = isAllSelected || activeCategories.length === 0 || activeCategories.some(category => tool.categories.includes(category));
                 return matchesFilter && matchesSearch && matchesCategories;
-            });
+            })
 
             filteredTools.sort((a,b) => {
                 if (a.featured && !b.featured) return - 1
