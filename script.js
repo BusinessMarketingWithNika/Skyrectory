@@ -43,7 +43,7 @@ export default function SkyRectory() {
     const toolsPerPage = 12
 }
 
-
+            const filterAndSortTools = () => {
             let filteredTools = tools.filter(tool => {
                 const matchesFilter = activeFilter === "all" || tool.type === activeFilter;
                 const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || tool.description.toLowerCase().includes(searchTerm);
