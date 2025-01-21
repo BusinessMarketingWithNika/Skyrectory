@@ -78,8 +78,15 @@ export default function SkyRectory() {
             })
             
             return filteredTools
-
         }
+
+
+            const paginatedTools = () => {
+                const filteredTools = filterAndSortTools()
+                const startIndex = (currentPage - 1) * toolsPerPage
+                const endIndex = startIndex + toolsPerPage
+                return filteredTools.slice(startIndex, endIndex)
+            }
 
          }
         )
