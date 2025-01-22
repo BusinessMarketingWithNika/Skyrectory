@@ -88,5 +88,6 @@ export default function SkyRectory() {
                 return filteredTools.slice(startIndex, endIndex)
             }
 
+            const pageCount = Math.ceil(filterAndSortTools().length / toolsPerPage)
          }
         )
