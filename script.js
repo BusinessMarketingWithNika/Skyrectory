@@ -103,5 +103,9 @@ export default function SkyRectory() {
                     )
                 }
             }
+
+            useEffect(() => {
+                setCurrentPage(1)
+            }, [activeFilter, sortBy, searchTerm, activeCategories])
          }
         )
