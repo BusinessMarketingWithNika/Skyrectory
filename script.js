@@ -119,5 +119,20 @@ export default function SkyRectory() {
                     window.focus() // Focus back on the current tab
                 }
             }
+
+            return (
+                <>
+                    <Link href="#sponsorship" className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-500 to-cyan-500 bg-opacity-80 backdrop-blur-sm p-4 cursor-pointer">
+                    <p className="text-center font-bold text-white">Claim your sponsor spot here!</p>
+                    </Link>
+                    <FloatingHeader />
+                    <div className="container mx-auto px-4 py-8 mt-24">
+                        <AnimatedTitleBackground>
+                            <h1 className="text-4x1 font-bold mb-8 text-center text-white drop-shadow-lg">
+                                SkyRectory - The Bluesky Tool Directory
+                            </h1>
+                        </AnimatedTitleBackground>
+                    </div>
+
          }
         )
