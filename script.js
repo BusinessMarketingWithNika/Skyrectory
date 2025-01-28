@@ -132,7 +132,17 @@ export default function SkyRectory() {
                                 SkyRectory - The Bluesky Tool Directory
                             </h1>
                         </AnimatedTitleBackground>
-                    </div>
+
+                        <div className="mb-6 relative">
+                            <Input
+                                type="text"
+                                placeholder="Search tools..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="w-full max-w-xl mx-auto"
+                           />
+                        </div>
+
 
          }
         )
