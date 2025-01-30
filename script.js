@@ -143,6 +143,42 @@ export default function SkyRectory() {
                            />
                         </div>
 
+                        <div className="flex flex-wrap justify-center gap-1 mb-6">
+                            <Button
+                                key="All"
+                                variant={isAllSelected ? "default" : "outline"}
+                                onClick={() => toggleCategory("All")}
+                                >
+                                    All
+                                    {category}
+                                </Button>
+                                {categories.map(category => (
+                                    <Button
+                                    key={category}
+                                    variant={activeCategories.includes(category) ?
+                                    "default" : "outline"}
+                                    onClick={() => toggleCategory(category)}
+                                    >
+                                        {category}
+                                    </Button>
+                            ))}
+                        </div>
 
+                        <div className="flex justify-end items-center mb-6">
+                            <Select
+                                value={sortBy}
+                                onValueChange={(value) => {
+                                    setSortBy(value)
+                                    if (["free", "paid"].includes(value)) {
+                                        setActiveFilter(value)
+                                    }   else {
+                                        setActiveCategories("all")
+                                    }
+                                }}
+                                >
+
+                                    
+                                </Select>
+                        </div>
          }
-        )forcing git to track changes 
+        )
