@@ -190,5 +190,15 @@ export default function SkyRectory() {
                                 </SelectContent>
                                 </Select>
                         </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                            {paginatedTools().map(tool => (
+                                <div
+                                    key={tool.id}
+                                    className="rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden bg-white cursor-pointer"
+                                    onClick={() => handleToolClick(tool)}
+                                >
+                            ))}
+                        </div>
          }
         )
