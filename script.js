@@ -208,7 +208,35 @@ export default function SkyRectory() {
                                     {tool.featured && <ToolBadge type="featured" />}
                                     <ToolBadge type={tool.type as 'free' | 'paid'} />
                                 </div>
-                                    </div>
+                            </div>
+                            <div className="p-4">
+                                <h3 className="text-lg font-semibold mb-2">
+                                    {tool.name}
+                                </h3>
+                                <p className="text-gray-600 text-sm mb-2">
+                                {tool.description}</p>
+                                <div className="flex items-center text-sm mb-2">
+                                    <span className="text-gray-600 mr-2">Created by</span>
+                                <Link 
+                                    href={`https://bsky.app/profile/${tool.creator.slice(1)}`}
+                                    className="text-blue-500 hover:underline bg-blue-100 px-2 py-1 rounded-full"
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    {tool.creator}
+                                </Link>
+                                </div>
+                            <div className="flex flex-wrap gap-1">
+                                {tool.categories.map(category => (
+                                    <span
+                                    key={category}
+                                    className="px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full text-xs"
+                                    >
+                                        {category}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                             ))}
                         </div>
          }
