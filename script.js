@@ -35,18 +35,17 @@ const categories = ["Analytics", "Schedulers", "Directories", "Chrome Extensions
 export default function SkyRectory() {
     const [currentPage, setCurrentPage] = useState(1)
     const [activeFilter, setActiveFilter] = useState("all")
-    const [sortyBy, setSortBy] = useState<string>("default") // Updated initial state
+    const [sortBy, setSortBy] = useState<string>("default") // Updated initial state
     const [searchTerm, setSearchTerm] = useState ("")
     const [activeCategories, setActiveCategories] = useState<string[]>([])
     const [isAllSelected, setIsAllSelected] = useState(true)
 
     const toolsPerPage = 12
-}
 
             const filterAndSortTools = () => {
             let filteredTools = tools.filter(tool => {
                 const matchesFilter = activeFilter === "all" || tool.type === activeFilter;
-                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || tool.description.toLowerCase().includes(searchTerm.toLowerCase());
+                const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) || tool.description.toLowerCase().includes(searchTerm.toLowerCase());
                 const matchesCategories = isAllSelected || activeCategories.length === 0 || activeCategories.some(category => tool.categories.includes(category));
                 return matchesFilter && matchesSearch && matchesCategories;
             })
@@ -128,7 +127,7 @@ export default function SkyRectory() {
                     <FloatingHeader />
                     <div className="container mx-auto px-4 py-8 mt-24">
                         <AnimatedTitleBackground>
-                            <h1 className="text-4x1 font-bold mb-8 text-center text-white drop-shadow-lg">
+                            <h1 className="text-4xl font-bold mb-8 text-center text-white drop-shadow-lg">
                                 SkyRectory - The Bluesky Tool Directory
                             </h1>
                         </AnimatedTitleBackground>
@@ -138,7 +137,7 @@ export default function SkyRectory() {
                                 type="text"
                                 placeholder="Search tools..."
                                 value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
+                                onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
                                 className="w-full max-w-xl mx-auto"
                            />
                         </div>
@@ -150,7 +149,6 @@ export default function SkyRectory() {
                                 onClick={() => toggleCategory("All")}
                                 >
                                     All
-                                    {category}
                                 </Button>
                                 {categories.map(category => (
                                     <Button
@@ -172,7 +170,7 @@ export default function SkyRectory() {
                                     if (["free", "paid"].includes(value)) {
                                         setActiveFilter(value)
                                     }   else {
-                                        setActiveCategories("all")
+                                        setActiveFilter("all")
                                     }
                                 }}
                                 >
@@ -238,6 +236,31 @@ export default function SkyRectory() {
                         </div>
                     </div>
                             ))}
-                        </div>
-         }
+                </div>
+
+                <div className="flex justify-center items-center mt-8 space-x-2">
+                    <Button
+                    variant="outline"
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                    >
+                        <ChevronLeft className="h-4 w-4" />
+                        Previous
+                    </Button>
+                    <span className="text-sm text-gray-600">
+                        Page {currentPage} of {pageCount}
+                    </span>
+                    <Button 
+                    variant="outline"
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, pageCount))}
+                    disabled={currentPage === pageCount}
+                    >
+                    Next<ChevronRight className="h-4 w-4" />
+                    </Button>
+                </div>
+                </div>
+                <Footer />
+                </>
+         
         )
+    }
