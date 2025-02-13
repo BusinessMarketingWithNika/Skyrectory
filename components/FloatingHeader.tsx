@@ -14,3 +14,15 @@ export function FloatingHeader() {
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
+
+    useEffect(() => {
+        const handlePreClick = (e: MouseEvent, targetId: string) => {
+            e.preventDefault()
+            const targetElement = document.getElementById(targetId)
+            if (targetElement) {
+                targetElement.click()
+                setTimeout(() => {
+                    window.location.href = (e.target as HTMLAnchorElement).href
+                }, 100)
+            }
+        }
