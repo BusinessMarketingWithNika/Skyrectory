@@ -26,3 +26,27 @@ export function FloatingHeader() {
                 }, 100)
             }
         }
+
+        const submitToolButton = document.getElementById("submit-tool-button")
+        const sponsorButton = document.getElementById("sponsor-button")
+
+        const submitToolHandler = (e: MouseEvent) => handlePreClick(e, "pre-click-element")
+        const sponsorHandler = (e: MouseEvent) => handlePreClick(e, "pre-click-element")
+
+        if (submitToolButton) {
+            submitToolButton.addEventListener("click", submitToolHandler)
+        }
+
+        if (sponsorButton) {
+            sponsorButton.addEventListener("click", sponsorHandler)
+        }
+
+        return () => {
+            if (submitToolButton) {
+                submitToolButton.removeEventListener("click", submitToolHandler)
+            }
+            if (sponsorButton) {
+                sponsorButton.removeEventListener('click', sponsorHandler)
+            }
+        }
+    }, [])
