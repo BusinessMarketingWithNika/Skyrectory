@@ -50,3 +50,8 @@ export function FloatingHeader() {
             }
         }
     }, [])
+
+        return (
+            <header
+            className={`fixed top-12 left-0 right-0 z-50 transition-all duration-300${isScrolled ? "bg-white/70 backdrop-blur-md" : bg-transparent"}`}>
+        )
