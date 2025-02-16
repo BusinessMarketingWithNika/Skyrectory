@@ -55,3 +55,13 @@ export function FloatingHeader() {
             <header
             className={`fixed top-12 left-0 right-0 z-50 transition-all duration-300${isScrolled ? "bg-white/70 backdrop-blur-md" : bg-transparent"}`}>
         )
+
+        <nav className="container mx-auto px-8 py-4 flex items-center relative z-10">
+            <div className="flex-shrink-0 mr-8">
+                <div className="flex items-center">
+                    <Link href="https://www.x.com">
+                    <Image src="/logo.svg" alt="SkyRectory Logo" width={40} height={40} />
+                    <span className="ml-2 text-xl font-bold text-gray-800">Skyrectory</span>
+                </div>
+            </div>
+        </nav>
