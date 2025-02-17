@@ -64,4 +64,11 @@ export function FloatingHeader() {
                     <span className="ml-2 text-xl font-bold text-gray-800">Skyrectory</span>
                 </div>
             </div>
+            <ul className="flex space-x-6 items-center justify-center flex-grow">
+          <li><Link href="#home" className="text-gray-800 hover:text-gray-600">Home</Link></li>
+          <li><Link href="#tools" className="text-gray-800 hover:text-gray-600">Tools</Link></li>
+          <li><Link href="#about" className="text-gray-800 hover:text-gray-600">About</Link></li>
+          <li><Link href="#contact" className="text-gray-800 hover:text-gray-600">Contact</Link></li>
+            </ul>
+            
         </nav>
