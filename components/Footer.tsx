@@ -21,5 +21,17 @@ export function Footer() {
         }
     }
 
-    return
+    return (
+        <footer className="bg-gray-100 mt-12 py-8">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 className="text-xl font-bold mb-2">SkyRectory</h3>
+                        <p className="text-gray-600">Discover the best Bluesky tools</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+    )
 }
