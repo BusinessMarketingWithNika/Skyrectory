@@ -29,6 +29,15 @@ export function Footer() {
                         <h3 className="text-xl font-bold mb-2">SkyRectory</h3>
                         <p className="text-gray-600">Discover the best Bluesky tools</p>
                     </div>
+                    <div>
+                        <h4 className="font-semibold mb-2">Quick Links</h4>
+                        <ul className="space-y-2">
+                            <li><a href="#" className="text-gray-600 hover:text-primary">Home</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-primary">Tools</a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-primary">Submit Tool</a>/a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-primary">About</a></li>
+                        </ul>
+                    </div>
                     
                 </div>
             </div>
