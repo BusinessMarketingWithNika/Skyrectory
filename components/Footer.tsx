@@ -34,11 +34,30 @@ export function Footer() {
                         <ul className="space-y-2">
                             <li><a href="#" className="text-gray-600 hover:text-primary">Home</a></li>
                             <li><a href="#" className="text-gray-600 hover:text-primary">Tools</a></li>
-                            <li><a href="#" className="text-gray-600 hover:text-primary">Submit Tool</a>/a></li>
+                            <li><a href="#" className="text-gray-600 hover:text-primary">Submit Tool</a></li>
                             <li><a href="#" className="text-gray-600 hover:text-primary">About</a></li>
                         </ul>
                     </div>
-                    
+                    <div>
+                        <h4 className="font-semibold mb-2">Follow us</h4>
+                        <div className="flex space-x-4">
+                            <a href="#" className="text-gray-600 hover:text-primary"><FaTwitter size={24} /></a>
+                            <a href="#" className="text-gray-600 hover:text-primary"><FaFacebook size={24} /></a>
+                            <a href="#" className="text-gray-600 hover:text-primary"><FaInstagram size={24} /></a>
+                            <a href="#" className="text-gray-600 hover:text-primary"><FaGithub size={24} /></a>
+                        </div>
+                </div>
+                <div>
+                    <h4 className="font-semibold mb-2">Newsletter</h4>
+                    <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
+                        <Input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        />
+                    </form>
                 </div>
             </div>
         </footer>
