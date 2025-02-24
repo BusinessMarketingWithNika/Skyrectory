@@ -57,9 +57,18 @@ export function Footer() {
                         onChange={(e) => setEmail(e.target.value)}
                         required
                         />
+                        <Button
+                        type="submit"
+                        className="bg-[#333] text-white border border-transparent hover:bg-white hover:text-[#333] hover:border-[#333] transition-colors duration-200">
+                            Subscribe
+                        </Button>
                     </form>
                 </div>
             </div>
+            <div className="mt-8 text-center text-gray-600">
+            © 2023 SkyRectory. All rights reserved.
+            </div>
+        </div>
         </footer>
     )
 }
