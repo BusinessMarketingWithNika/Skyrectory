@@ -22,3 +22,15 @@ const tools = [
     },
     // .. (include all other tools)
 ]
+
+export default function ToolPage () . {
+    const params = useParams ()
+    const toolId = parseInt(params.id as string)
+    const tool = tools.find(t => t.id === toolId)
+
+    if (!tool) {
+        return <div> Tool not found</div>
+    }
+
+    return ()
+}
