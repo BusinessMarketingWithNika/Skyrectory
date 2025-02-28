@@ -23,7 +23,7 @@ const tools = [
     // .. (include all other tools)
 ]
 
-export default function ToolPage () . {
+export default function ToolPage () {
     const params = useParams ()
     const toolId = parseInt(params.id as string)
     const tool = tools.find(t => t.id === toolId)
@@ -32,5 +32,26 @@ export default function ToolPage () . {
         return <div> Tool not found</div>
     }
 
-    return ()
+    return (
+        <>
+        <FloatingHeader />
+        <div className="container mx-auto px-4 py-8 mt-24">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="relative">
+                    <img
+                        src={tool.image}
+                        alt={`${tool.name} logo`}
+                        className="w-full h-64 object-cover"
+                        />
+                        <div className="absolute top-4 right-4 flex gap-2">
+                            {tool.featured && <ToolBadge type="featured" />}
+                            <ToolBadge type={tool.type as "free" | "paid" } />
+                        </div>
+                </div>
+
+                
+            </div>
+        </div>
+        </>
+    )
 }
