@@ -48,7 +48,7 @@ export default function ToolPage () {
                             <ToolBadge type={tool.type as "free" | "paid" } />
                         </div>
                 </div>
-                <div className="p-6"
+                <div className="p-6">
                 <h1 className="text-3x1 font-bold mb-4">{tool.name}</h1>
                 <p className="text-gray-600 mb-4">{tool.description}</p>
                 <div className="flex items-cneter text-lg mb-4">
