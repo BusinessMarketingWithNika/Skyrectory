@@ -49,16 +49,27 @@ export default function ToolPage () {
                         </div>
                 </div>
                 <div className="p-6">
-                <h1 className="text-3x1 font-bold mb-4">{tool.name}</h1>
+                <h1 className="text-3xl font-bold mb-4">{tool.name}</h1>
                 <p className="text-gray-600 mb-4">{tool.description}</p>
-                <div className="flex items-cneter text-lg mb-4">
+                <div className="flex items-center text-lg mb-4">
                     <span className="text-gray-600 mr-2">Created by</span>
                     <Link
                     href={`https://bsky.app/profile/${tool.creator.slice(1)}`}
-                    classname="text-blue-500 hover:underline bg-blue-100 px-3 py-1.5 rounded-full"
+                    className="text-blue-500 hover:underline bg-blue-100 px-3 py-1.5 rounded-full"
                     >
                         {tool.creator}
                     </Link>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                        {tool.categories.map(category => (
+                            <span 
+                            key={category}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                            >
+                                {category}
+                            </span>
+                        ))}
+                        
+                    </div>
                 </div>
 
             </div>
