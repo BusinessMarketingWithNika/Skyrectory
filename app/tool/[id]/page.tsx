@@ -59,6 +59,7 @@ export default function ToolPage () {
                     >
                         {tool.creator}
                     </Link>
+                    </div>
                     <div className="flex flex-wrap gap-2 mb-4">
                         {tool.categories.map(category => (
                             <span 
@@ -68,12 +69,12 @@ export default function ToolPage () {
                                 {category}
                             </span>
                         ))}
-                        
                     </div>
+                    <p className="text-sm text-gray-500">Added on: {new Date(tool.date).toLocaleDateString()}</p>
                 </div>
-
             </div>
         </div>
+        <Footer />
         </>
     )
 }
