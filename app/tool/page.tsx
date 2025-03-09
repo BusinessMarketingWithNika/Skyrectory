@@ -60,7 +60,12 @@ export default function SkyRectory() {
             const matchesFilter = activeFilter === "all" || tool.type === activeFilter
             const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase ()) || tool.description.toLowerCase().includes(searchTerm.toLowerCase())
             const matchesCategories = isAllSelected || activeCategories.length === 0 || activeCategories.some(category => tool.categories.includes(category))
-            return matchesFilter && matchesFilter && matchesSearch && matchesCategories
+            return matchesFilter && matchesSearch && matchesCategories
+        })
+
+        filteredTools.sort((a, b) => {
+            if (a.featured && !b.featured) return -1
+            if (!a.featured && b.featured) return 1
         })
     }
     )
