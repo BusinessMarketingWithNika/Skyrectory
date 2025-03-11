@@ -73,7 +73,7 @@ export default function SkyRectory() {
                 case "newest":
                     return new Date(b.date).getTime() - new Date(a.date).getTime()
                 case "oldest":
-                    return new Date(a.date).getTime() – new Date(b.date).getTime()
+                    return new Date(a.date).getTime() - new Date(b.date).getTime()
                 case "a-z":
                     return a.name.localeCompare(b.name)
                 case "z-a":
@@ -88,6 +88,13 @@ export default function SkyRectory() {
         })
 
         return filteredTools
+    }
+
+    const paginatedTools = () => {
+        const filteredTools = filterAndSortTools()
+        const startIndex = (currentPage - 1) * toolsPerPage
+        const endIndex = startIndex + toolsPerPage
+        return filteredTools.slice(startIndex, endIndex)
     }
     )
 }
