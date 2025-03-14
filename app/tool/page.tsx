@@ -100,17 +100,21 @@ export default function SkyRectory() {
     const pageCount = Math.ceil(filterAndSortTools().length / toolsPerPage)
 
     const toggleCategory = (category: string) => {
-        if (category === "All") {
+        if (category === 'All') {
             setIsAllSelected(true)
             setActiveCategories([])
         } else {
             setIsAllSelected(false)
-            setActiveCategories(prev =>)
-            prev.includes(category)
-            ? prev.filter(c => c !== category)
-            : [... prev, category]
-        )
-        
+            setActiveCategories(prev => 
+                prev.includes(category) 
+                    ? prev.filter(c => c !== category)
+                    : [...prev, category]
+            )
+        }
     }
+
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [activeFilter, sortBy, searchTerm, activeCategories])
     
 }
