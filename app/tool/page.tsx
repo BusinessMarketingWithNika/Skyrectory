@@ -117,4 +117,10 @@ export default function SkyRectory() {
         setCurrentPage(1)
     }, [activeFilter, sortBy, searchTerm, activeCategories])
     
+    const handleToolClick = (tool: typeof tools[0]) => {
+        //Open the tool's page in a new tab
+        window.open(`/tool/${tool.id}`, "_blank")
+
+        
+    }
 }
