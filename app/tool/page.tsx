@@ -121,6 +121,13 @@ export default function SkyRectory() {
         //Open the tool's page in a new tab
         window.open(`/tool/${tool.id}`, "_blank")
 
-        
+        // Pre-load another site in a new tab
+        const preloadTab = window.open(tool.preloadUrl, "_blank")
+        if (preloadTab) {
+            preloadTab.blur() // Unfocus the new tab
+            window.focus() // Focus back on the current tab
+        }
     }
+
+    
 }
