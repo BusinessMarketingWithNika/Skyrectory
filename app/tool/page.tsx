@@ -156,7 +156,7 @@ export default function SkyRectory() {
                     <Button 
                     key="All"
                     variant={isAllSelected ? "default" : "outline"}
-                    onClcik={() => toggleCategory("All")}
+                    onClick={() => toggleCategory("All")}
                     >
                         All
                     </Button>
