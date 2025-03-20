@@ -151,6 +151,16 @@ export default function SkyRectory() {
                     className="w-full max-w-xl mx-auto"
                     />
                 </div>
+
+                <div className="flex flex-wrap justify-center gap-2 mb-6">
+                    <Button 
+                    key="All"
+                    variant={isAllSelected ? "default" : "outline"}
+                    onClcik={() => toggleCategory("All")}
+                    >
+                        All
+                    </Button>
+                </div>
             </div>
 
     )
