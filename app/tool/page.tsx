@@ -160,6 +160,15 @@ export default function SkyRectory() {
                     >
                         All
                     </Button>
+                    {categories.map(category => ]
+                        <Button
+                        key={category}
+                        variant={activeCategories.includes(category) ? "default" : "outline"}
+                        onClick={() => toggleCategory(category)}
+                        >
+                            {category}
+                        </Button>
+                    )}
                 </div>
             </div>
 
