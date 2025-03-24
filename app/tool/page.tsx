@@ -183,7 +183,9 @@ export default function SkyRectory() {
                         }
                     }}
                     >
-
+                        <SelectTrigger className="w-[180px]">
+                            <SelectValue placeholder="Order by" />
+                        </SelectTrigger>
                     </Select>
                 </div>
                 
