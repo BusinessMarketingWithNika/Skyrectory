@@ -186,8 +186,17 @@ export default function SkyRectory() {
                         <SelectTrigger className="w-[180px]">
                             <SelectValue placeholder="Order by" />
                         </SelectTrigger>
-                    </Select>
-                </div>
+                    <SelectContent>
+                        <SelectItem value="default">Order by</SelectItem>
+                        <SelectItem value="newest">Newest</SelectItem>
+                        <SelectItem value="oldest">Oldest</SelectItem>
+                        <SelectItem value="a-z">A-Z</SelectItem>
+                        <SelectItem value="z-a">Z-A</SelectItem>
+                        <SelectItem value="free">Freet</SelectItem>
+                        <SelectItem value="paid">Paid</SelectItem>
+                    </SelectContent>
+                </Select>
+            </div>
                 
             </div>
 
