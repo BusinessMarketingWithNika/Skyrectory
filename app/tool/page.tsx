@@ -192,12 +192,20 @@ export default function SkyRectory() {
                         <SelectItem value="oldest">Oldest</SelectItem>
                         <SelectItem value="a-z">A-Z</SelectItem>
                         <SelectItem value="z-a">Z-A</SelectItem>
-                        <SelectItem value="free">Freet</SelectItem>
+                        <SelectItem value="free">Free</SelectItem>
                         <SelectItem value="paid">Paid</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
-                
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {paginatedTools().map(tools => (
+                        <div
+                        key={tool.id}
+                        className="rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden bg-white cursor-pointer"
+                        onClick={() => handleToolClick(tool)}
+                        >
+                    ))}
+                </div>
             </div>
 
     )
