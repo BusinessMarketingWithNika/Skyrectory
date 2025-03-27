@@ -198,12 +198,25 @@ export default function SkyRectory() {
                 </Select>
             </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {paginatedTools().map(tools => (
+                    {paginatedTools().map(tool => (
                         <div
                         key={tool.id}
                         className="rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden bg-white cursor-pointer"
                         onClick={() => handleToolClick(tool)}
                         >
+
+                        <div className="relative">
+                            <img
+                                src={tool.image || "/placeholder.svg"}
+                                alt={`${tool.name} logo`}
+                                className="w-full h-48 object-cover"
+                                />
+                                <div className="absolute top-2 right-2 flex gap-2">
+                                    {tool.featured && <ToolBadge type="featured" />}
+                                    <ToolBadge type={tool.type as "free" | "paid"} />
+                                </div>
+                             </div>
+
                     ))}
                 </div>
             </div>
