@@ -216,6 +216,10 @@ export default function SkyRectory() {
                                     <ToolBadge type={tool.type as "free" | "paid"} />
                                 </div>
                              </div>
+                             <div className="p-4">
+                                <h3 className="text-lg font-semibold mb-2">
+                                    {tool.name}
+                                </h3>
 
                     ))}
                 </div>
