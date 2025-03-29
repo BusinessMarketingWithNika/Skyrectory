@@ -220,6 +220,12 @@ export default function SkyRectory() {
                                 <h3 className="text-lg font-semibold mb-2">
                                     {tool.name}
                                 </h3>
+                                <p className="text-gray-600 text-sm mb-2">{tool.description}
+                                </p>
+                                <div className="flex items-center text-sm mb-2">
+                                    <span className="text-gray-600 mr-2">Created by
+                                    </span>
+                                </div>
 
                     ))}
                 </div>
