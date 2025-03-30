@@ -225,6 +225,13 @@ export default function SkyRectory() {
                                 <div className="flex items-center text-sm mb-2">
                                     <span className="text-gray-600 mr-2">Created by
                                     </span>
+                                    <Link
+                                    href={`https://bsky.app/profile/${tool.creator.slice(1)}`}
+                                    className="text-blue-500 hover:underline bg-blue-100 px-2 py-1 rounded-full"
+                                    onClické{(e) => e.stopPropagation()}
+                                    >
+                                        {tool.creator}
+                                    </Link>
                                 </div>
 
                     ))}
