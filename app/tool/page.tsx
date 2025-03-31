@@ -228,10 +228,20 @@ export default function SkyRectory() {
                                     <Link
                                     href={`https://bsky.app/profile/${tool.creator.slice(1)}`}
                                     className="text-blue-500 hover:underline bg-blue-100 px-2 py-1 rounded-full"
-                                    onClické{(e) => e.stopPropagation()}
+                                    onClick{(e) => e.stopPropagation()}
                                     >
                                         {tool.creator}
                                     </Link>
+                                </div>
+                                <div className="flex flex-wrap gap-1">
+                                    {tool.categories.map(category => (
+                                        <span
+                                            key={category}
+                                            className="px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full text-xs"
+                                            >
+                                                {category}
+                                            </span>
+                                    ))}
                                 </div>
 
                     ))}
