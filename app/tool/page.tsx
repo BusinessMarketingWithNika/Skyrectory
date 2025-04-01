@@ -243,10 +243,22 @@ export default function SkyRectory() {
                                             </span>
                                     ))}
                                 </div>
-
+                            </div>
+                        </div>
                     ))}
                 </div>
-            </div>
+
+                <div className="flex justify-center items-center mt-8 space-x-2">
+                    <Button
+                        variant="outline"
+                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                        disabled={currentPage === 1}
+                        >
+
+                        <ChevronLeft className="h-4 w-4" />
+                        Previous
+                        </Button>
+                </div>
 
     )
 
