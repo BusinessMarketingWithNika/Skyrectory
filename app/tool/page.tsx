@@ -258,7 +258,22 @@ export default function SkyRectory() {
                         <ChevronLeft className="h-4 w-4" />
                         Previous
                         </Button>
+                        <span className="text-sm text-gray-600">
+                            Page {currentPage} of {pageCount}
+                        </span>
+                        <Button
+                            variant="outline"
+                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, pageCount))}
+                            disabled={currentPage === pageCount}
+                            >
+                                Next
+                                <ChevronRight className="h-4 w-4" />
+                            </Button>
                 </div>
+            </div>
+            <Footer />
+
+            </>
 
     )
 
